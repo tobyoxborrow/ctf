@@ -1,4 +1,4 @@
-# 02 Best Bank 2
+# 04 Best Bank 2
 
 The Best Bank website has been upgraded to prevent vulnerabilities of the past.
 The electronic cheques now include an HMAC of the transaction to verify it has
@@ -6,6 +6,9 @@ not been tampered with.
 
 To receive the flag, deposit a cheque in any bank account for at least $5000.
 Your own account only has $200.
+
+The restrictions of the bank website also prevent you from creating cheques for
+greater than $1000.
 
 Access to the ruby source code used by the bank to generate the cheques was
 provided. The HMAC's secret key is redacted from the source code.
