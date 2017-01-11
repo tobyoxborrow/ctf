@@ -275,6 +275,7 @@ vagrant@vagrant-ubuntu-trusty-64:/vagrant$ cat frequency.txt | sort | uniq -c | 
 Grouping in pairs looks very promising, furthermore it falls within the range
 of ASCII letters:
 
+```
 vagrant@vagrant-ubuntu-trusty-64:/vagrant$ cat frequency2.txt | sort | uniq -c | sort -nr
       5 20	space
       2 75  u
