@@ -1,6 +1,6 @@
 # 05 Hidden
 
-The flag is stored in the javascript code of a website. The javascript code has
+The flag is stored in the JavaScript code of a website. The JavaScript code has
 been obfuscated.
 
 ## Write-up
@@ -8,7 +8,7 @@ been obfuscated.
 Viewing the source code and trying to work it out by manually reading it wasn't
 really an option.
 
-I found an extension for firefox that would "deobfuscate" javascript.
+I found an extension for Firefox that would "deobfuscate" JavaScript.
 
 [JavaScript Deobfuscator](https://addons.mozilla.org/en-us/firefox/addon/javascript-deobfuscator/)
 
