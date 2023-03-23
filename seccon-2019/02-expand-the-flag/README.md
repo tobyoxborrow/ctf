@@ -2,19 +2,22 @@
 
 Say hello, tell me your name. I bet you can't eXpand My fLag TXT
 
-The challenge link goes to a simple web form that asks for your name, two text input fields for your first and last name, and a button to submit.
-
 ## Write-up
 
 The letters XML were capitalized in the challenge introduction. Also the name of the challenge includes Expand. XML Entity Expansion is a type of vulnerability and likely what's needed to get the flag.
 
 https://en.wikipedia.org/wiki/XML_external_entity_attack
 
+
+The challenge link goes to a simple web form that asks for your name, two text input fields for your first and last name, and a button to submit.
+
+![Web page with two input boxes and a submit button](input.png)
+
+
 Entering text into the input boxes and submitting will load another page repeating the text back.
 
-!(input.png)
+![Web page saying "Hello a b."](output.png)
 
-!(output.png)
 
 Some tests on the input fields:
 * using the < character - the second page instead displays the message "Parsing Failed".
@@ -57,7 +60,7 @@ At this point it is assumed there is a file on the server with the flag we need 
 
 To test faster, rather than trying via a web browser, I switched to Burp Suite's Repeater. I could submit directly to the server and skip the formatting automatically added by the javascript too.
 
-!(burp.png)
+![Burp Suite desktop application running its Repeater module](burp.png)
 
 The general idea for the XML Entity Expansion attack to be used here would be to define an entity, using any name we like, that points to a file on the server. Then reference that entity name, which will cause the server to expand the entity into the contents of the file.
 
@@ -86,7 +89,7 @@ data=<!DOCTYPE name [ <!ENTITY txt SYSTEM "file:////etc/passwd" > ]><name>%26txt
 This returned the file, besides the standard users, there was a challenge user at the end:
 
 ```HTML
-<pre>Hello  .
+Hello  .
 Unnexpected data
 name: root:x:0:0:root:/root:/bin/bash
 name: daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
