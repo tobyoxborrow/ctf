@@ -65,4 +65,6 @@ And:
 0070   7d 0d 0a                                          }..
 ```
 
-FlAg{C0mPl3x FLAG}
+For this challenge though, the flag was the first of the three I found:
+
+flag{1n53cur3}
