@@ -33,7 +33,7 @@ Then I saw it, looking at the packets in Wireshark in order, they spelled out th
 
 ```
 No.	Time	Source	Destination	Protocol	Length	Info
-533841  7551.215355 117.211.91.249  119.95.166.63   DNS 101 Standard query 0x01b6 TXT f.tunnel.localhost OPT
+533841	7551.215355	117.211.91.249	119.95.166.63	DNS	101	Standard query 0x01b6 TXT f.tunnel.localhost OPT
 533842	7551.215671	119.95.166.63	117.211.91.249	DNS	158	Standard query response 0x01b6 No such name TXT f.tunnel.localhost SOA localhost OPT
 533845	7551.243036	117.211.91.249	119.95.166.63	DNS	101	Standard query 0x8d7b TXT l.tunnel.localhost OPT
 533846	7551.243293	119.95.166.63	117.211.91.249	DNS	158	Standard query response 0x8d7b No such name TXT l.tunnel.localhost SOA localhost OPT
